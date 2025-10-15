@@ -9,6 +9,15 @@ export default class PadreDeporte extends Component {
     state = {
         deporteFavorito: ''
     }
+    //Debemos tener un metodo que sera invocado por el hijo 
+    //al pulsar sobre el boton seleccionar
+
+
+    monstrarFavorito = (deporteSeleccionado) => {
+        this.setState({
+            deporteFavorito: deporteSeleccionado
+        })
+    }
 
     
 
@@ -16,10 +25,11 @@ export default class PadreDeporte extends Component {
         return(
             <div>
                 <h1>Padre deporte</h1>
+                <h3 style={{backgroundColor:'gold'}}>Su deporte favorito es: {this.state.deporteFavorito}</h3>
                 {this.deporteFavorito}
                 {
                     this.deportes.map((deporte,i) => {
-                        return(<HijoDeporte key={i} deporte={deporte}/>)
+                        return(<HijoDeporte key={i} deporte={deporte} monstrarFavorito={this.monstrarFavorito}/>)
                     })
                 }
             </div>

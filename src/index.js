@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import DibujosComplejosRender from './components/DibujosComplejosRender';
-import PadreDeporte from './components/PadreDeporte';
+import PadreNumero from './components/PadreNumero';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <PadreDeporte />
+   <PadreNumero />
   </React.StrictMode>
 );
 
